@@ -118,12 +118,12 @@ export default function CtaBanner() {
             delay={0.2}
             scale
             blur
-            className="hidden lg:block"
+            className="flex justify-center lg:block"
           >
             <div className="relative flex justify-center">
               {/* Glow behind cat */}
               <motion.div
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-white/10 blur-3xl"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full bg-white/10 blur-3xl"
                 animate={{ scale: [1, 1.15, 1] }}
                 transition={{
                   duration: 4,
@@ -134,7 +134,7 @@ export default function CtaBanner() {
               />
               <FloatingElement duration={5} distance={12}>
                 <motion.div
-                  className="relative w-72 h-96 drop-shadow-2xl"
+                  className="relative w-44 h-56 sm:w-56 sm:h-72 lg:w-72 lg:h-96 drop-shadow-2xl"
                   whileHover={{ scale: 1.05, rotate: 2 }}
                   transition={{ type: "spring", stiffness: 200, damping: 15 }}
                 >
@@ -143,27 +143,10 @@ export default function CtaBanner() {
                     alt="Gato saludable y feliz en Firo Vet"
                     fill
                     className="object-contain"
-                    sizes="300px"
+                    sizes="(max-width: 640px) 176px, (max-width: 1024px) 224px, 300px"
                   />
                 </motion.div>
               </FloatingElement>
-              {/* Floating pill badge */}
-              <motion.div
-                className="absolute -bottom-2 left-1/2 -translate-x-1/2 glass rounded-full px-5 py-2 shadow-lg z-10"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  delay: 0.8,
-                  type: "spring",
-                  stiffness: 200,
-                  damping: 15,
-                }}
-              >
-                <p className="text-sm font-semibold text-primary-700 whitespace-nowrap">
-                  🩺 Primera consulta -20%
-                </p>
-              </motion.div>
             </div>
           </Reveal>
         </div>
