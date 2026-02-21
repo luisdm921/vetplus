@@ -21,15 +21,15 @@ const contactMethods = [
   {
     icon: FaPhoneAlt,
     label: "Teléfono",
-    value: "+52 555 000 0300",
-    href: "tel:+525550000300",
+    value: "+52 844 584 1876",
+    href: "tel:+528445841876",
     description: "Llámanos directamente",
   },
   {
     icon: FaWhatsapp,
     label: "WhatsApp",
-    value: "+52 555 000 0300",
-    href: "https://wa.me/5255500300?text=Hola%2C%20me%20gustaría%20agendar%20una%20consulta%20para%20mi%20mascota",
+    value: "+52 844 584 1876",
+    href: "https://wa.me/528445841876?text=Hola%2C%20me%20gustaría%20agendar%20una%20consulta%20para%20mi%20mascota",
     description: "Respuesta en minutos",
   },
   {
@@ -42,8 +42,8 @@ const contactMethods = [
   {
     icon: FaClock,
     label: "Urgencias 24/7",
-    value: "+52 555 000 0301",
-    href: "tel:+525550000301",
+    value: "+52 844 584 1876",
+    href: "tel:+528445841876",
     description: "Línea de emergencia",
   },
 ];
@@ -179,30 +179,19 @@ export default function Contact() {
           <div className="flex flex-col gap-6">
             {/* Map placeholder */}
             <Reveal direction="right" blur className="flex-1">
-              <motion.div
-                className="relative w-full h-full min-h-[280px] rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-soft"
-                whileHover={{ scale: 1.01 }}
-                transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              >
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-                  <motion.div
-                    animate={{ y: [-4, 4, -4] }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <FaMapMarkerAlt className="text-3xl text-primary-400 mb-3" />
-                  </motion.div>
-                  <p className="text-slate-500 font-heading font-medium">
-                    Google Maps
-                  </p>
-                  <p className="text-slate-400 text-sm mt-1">
-                    Insertar iframe de Google Maps aquí
-                  </p>
-                </div>
-              </motion.div>
+              <div className="relative w-full h-full min-h-[280px] rounded-3xl overflow-hidden border border-slate-200 shadow-soft">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.661610681498!2d-99.16869032396645!3d19.42702024114498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff315204921d%3A0xf818a3f4f0fc1048!2s%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses!2smx!4v1708547200000!5m2!1ses!2smx"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: "280px" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Ubicación - Ángel de la Independencia"
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
             </Reveal>
 
             {/* CTA Card with tilt */}
@@ -235,7 +224,7 @@ export default function Contact() {
                     </p>
                     <MagneticHover strength={0.12}>
                       <a
-                        href="https://wa.me/5255500300?text=Hola%2C%20quiero%20agendar%20mi%20primera%20consulta%20con%20el%2020%25%20de%20descuento"
+                        href="https://wa.me/528445841876?text=Hola%2C%20quiero%20agendar%20mi%20primera%20consulta%20con%20el%2020%25%20de%20descuento"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-primary-700 font-semibold rounded-xl hover:bg-cream-50 transition-all duration-300 shadow-lg hover:shadow-xl text-sm"

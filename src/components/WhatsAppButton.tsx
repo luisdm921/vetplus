@@ -21,7 +21,7 @@ export default function WhatsAppButton() {
   }, [tooltip]);
 
   const whatsappUrl =
-    "https://wa.me/5255500300?text=Hola%2C%20me%20gustaría%20agendar%20una%20consulta%20para%20mi%20mascota";
+    "https://wa.me/528445841876?text=Hola%2C%20me%20gustaría%20agendar%20una%20consulta%20para%20mi%20mascota";
 
   return (
     <AnimatePresence>

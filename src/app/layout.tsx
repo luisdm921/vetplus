@@ -84,7 +84,7 @@ export default function RootLayout({
     description:
       "Clínica veterinaria premium con atención integral. Consultas, cirugía, urgencias 24/7, estética canina y más.",
     url: "https://www.firovet.com",
-    telephone: "+52-555-000-0300",
+    telephone: "+52-844-584-1876",
     email: "contacto@firovet.com",
     address: {
       "@type": "PostalAddress",

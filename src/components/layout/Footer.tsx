@@ -40,7 +40,7 @@ const socials = [
   { icon: FaTiktok, href: "https://www.tiktok.com/@firovet", label: "TikTok" },
   {
     icon: FaWhatsapp,
-    href: "https://wa.me/5255500300",
+    href: "https://wa.me/528445841876",
     label: "WhatsApp",
   },
 ];
@@ -127,11 +127,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="tel:+525550000300"
+                  href="tel:+528445841876"
                   className="flex items-center gap-2.5 text-slate-400 hover:text-primary-400 text-sm transition-colors"
                 >
                   <FaPhoneAlt className="text-xs flex-shrink-0" />
-                  +52 555 000 0300
+                  +52 844 584 1876
                 </a>
               </li>
               <li>
