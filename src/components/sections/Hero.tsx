@@ -115,7 +115,7 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
                 <MagneticHover strength={0.15}>
                   <a
-                    href="https://wa.me/528445841876?text=Hola%2C%20me%20gustaría%20agendar%20una%20consulta%20para%20mi%20mascota"
+                    href="https://wa.me/528445841876?text=Hola%2C%20vi%20su%20pagina%20y%20me%20gustaria%20agendar%20una%20cita%20para%20mi%20mascota.%20Podrian%20darme%20informacion%20por%20favor%3F"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-2xl shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 transition-all duration-300 text-base"

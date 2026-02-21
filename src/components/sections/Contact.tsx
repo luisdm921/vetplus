@@ -29,7 +29,7 @@ const contactMethods = [
     icon: FaWhatsapp,
     label: "WhatsApp",
     value: "+52 844 584 1876",
-    href: "https://wa.me/528445841876?text=Hola%2C%20me%20gustaría%20agendar%20una%20consulta%20para%20mi%20mascota",
+    href: "https://wa.me/528445841876?text=Hola%2C%20me%20interesa%20agendar%20una%20cita.%20Podrian%20indicarme%20disponibilidad%20y%20costos%3F",
     description: "Respuesta en minutos",
   },
   {
@@ -224,7 +224,7 @@ export default function Contact() {
                     </p>
                     <MagneticHover strength={0.12}>
                       <a
-                        href="https://wa.me/528445841876?text=Hola%2C%20quiero%20agendar%20mi%20primera%20consulta%20con%20el%2020%25%20de%20descuento"
+                        href="https://wa.me/528445841876?text=Hola%2C%20vi%20la%20promocion%20del%2020%25%20de%20descuento%20en%20primera%20consulta%20y%20me%20gustaria%20aprovecharla.%20Como%20puedo%20agendar%3F"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-primary-700 font-semibold rounded-xl hover:bg-cream-50 transition-all duration-300 shadow-lg hover:shadow-xl text-sm"

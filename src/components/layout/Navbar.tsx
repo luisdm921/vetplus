@@ -126,7 +126,7 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <MagneticHover strength={0.15}>
                 <motion.a
-                  href="https://wa.me/528445841876?text=Hola%2C%20me%20gustaría%20agendar%20una%20consulta"
+                  href="https://wa.me/528445841876?text=Hola%2C%20me%20gustaria%20agendar%20una%20cita%20con%20ustedes.%20Tienen%20disponibilidad%3F"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-xl shadow-sm shadow-primary-500/20 transition-all duration-300"
@@ -207,7 +207,7 @@ export default function Navbar() {
                   transition={{ delay: 0.3 }}
                 >
                   <a
-                    href="https://wa.me/528445841876?text=Hola%2C%20me%20gustaría%20agendar%20una%20consulta"
+                    href="https://wa.me/528445841876?text=Hola%2C%20me%20gustaria%20agendar%20una%20cita%20con%20ustedes.%20Tienen%20disponibilidad%3F"
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setMobileOpen(false)}

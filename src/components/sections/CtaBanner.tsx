@@ -91,7 +91,7 @@ export default function CtaBanner() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <MagneticHover strength={0.15}>
                   <a
-                    href="https://wa.me/528445841876?text=Hola%2C%20me%20gustaría%20agendar%20una%20consulta%20para%20mi%20mascota"
+                    href="https://wa.me/528445841876?text=Hola%2C%20quiero%20agendar%20una%20consulta%20veterinaria.%20Me%20pueden%20indicar%20horarios%20disponibles%3F"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-primary-700 font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 text-base"
