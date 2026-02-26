@@ -13,10 +13,10 @@ import { MagneticHover, ScrollProgress } from "@/components/animations";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
-  { label: "Nosotros", href: "#sobre-nosotros" },
-  { label: "Servicios", href: "#servicios" },
   { label: "Testimonios", href: "#testimonios" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Servicios", href: "#servicios" },
+  { label: "Ubicación", href: "#contacto" },
+  { label: "Preguntas", href: "#preguntas" },
 ];
 
 export default function Navbar() {
@@ -129,17 +129,17 @@ export default function Navbar() {
                   href="https://wa.me/528445841876?text=Hola%2C%20me%20gustaria%20agendar%20una%20cita%20con%20ustedes.%20Tienen%20disponibilidad%3F"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-xl shadow-sm shadow-primary-500/20 transition-all duration-300"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] text-white text-sm font-semibold rounded-xl shadow-sm shadow-[#25D366]/20 transition-all duration-300"
                   whileHover={{
-                    backgroundColor: "#0f766e",
-                    boxShadow: "0 8px 24px rgba(13,148,136,0.3)",
+                    backgroundColor: "#20BD5A",
+                    boxShadow: "0 8px 24px rgba(37,211,102,0.3)",
                     scale: 1.03,
                   }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 400, damping: 15 }}
                 >
                   <FaWhatsapp className="text-base" />
-                  Agendar Cita
+                  Agendar cita ahora
                 </motion.a>
               </MagneticHover>
             </div>

@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import {
   Reveal,
   TextReveal,
   Marquee,
   MorphingBlob,
+  MagneticHover,
 } from "@/components/animations";
 
 const testimonials = [
@@ -130,7 +132,7 @@ export default function Testimonials() {
             </span>
           </Reveal>
           <TextReveal
-            text="Lo que dicen las familias que confían en nosotros"
+            text="+340 familias nos dan 4.9 estrellas. Esto es lo que dicen:"
             className="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight"
             tag="h2"
             delay={0.1}
@@ -138,8 +140,8 @@ export default function Testimonials() {
           />
           <Reveal delay={0.3} blur>
             <p className="text-slate-500 text-lg leading-relaxed">
-              Más de 5,000 mascotas atendidas y cientos de familias felices. Lee
-              sus experiencias reales.
+              Historias reales de dueños que eligieron Firo Vet para sus
+              mascotas. Lee por qué siguen viniendo.
             </p>
           </Reveal>
         </div>
@@ -153,6 +155,28 @@ export default function Testimonials() {
           ))}
         </Marquee>
       </Reveal>
+
+      {/* CTA after social proof */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+        <Reveal blur>
+          <div className="text-center">
+            <p className="text-slate-600 text-base mb-4 font-medium">
+              Únete a las familias que ya confían en nosotros
+            </p>
+            <MagneticHover strength={0.12}>
+              <a
+                href="https://wa.me/528445841876?text=Hola%2C%20vi%20las%20rese%C3%B1as%20de%20Firo%20Vet%20y%20me%20gustaria%20agendar%20una%20cita%20para%20mi%20mascota."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold rounded-2xl shadow-lg shadow-[#25D366]/25 transition-all duration-300 text-base"
+              >
+                <FaWhatsapp className="text-xl" />
+                Quiero la misma atención para mi mascota
+              </a>
+            </MagneticHover>
+          </div>
+        </Reveal>
+      </div>
     </section>
   );
 }

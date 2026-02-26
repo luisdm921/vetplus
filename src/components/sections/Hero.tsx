@@ -5,10 +5,9 @@ import { useRef } from "react";
 import Image from "next/image";
 import {
   FaWhatsapp,
-  FaCalendarCheck,
   FaShieldAlt,
   FaClock,
-  FaHeart,
+  FaCheckCircle,
 } from "react-icons/fa";
 import {
   TextReveal,
@@ -18,10 +17,10 @@ import {
   Reveal,
 } from "@/components/animations";
 
-const stats = [
-  { value: "10+", label: "Años de experiencia", icon: FaShieldAlt },
-  { value: "5,000+", label: "Mascotas atendidas", icon: FaHeart },
-  { value: "24/7", label: "Urgencias disponibles", icon: FaClock },
+const urgencyPoints = [
+  { icon: FaClock, text: "Te respondemos en menos de 5 minutos" },
+  { icon: FaCheckCircle, text: "Citas disponibles hoy mismo" },
+  { icon: FaShieldAlt, text: "10+ años · 5,000+ mascotas atendidas" },
 ];
 
 export default function Hero() {
@@ -38,13 +37,12 @@ export default function Hero() {
       id="inicio"
       className="relative flex items-center overflow-hidden bg-gradient-to-br from-cream-50 via-white to-primary-50/30"
     >
-      {/* Parallax background decorative elements — hidden on small screens for performance */}
+      {/* Parallax background decorative elements */}
       <motion.div
         className="absolute inset-0 pointer-events-none hidden md:block"
         aria-hidden="true"
         style={{ y: bgY }}
       >
-        {/* Morphing blobs instead of static gradients */}
         <MorphingBlob
           className="-top-32 -right-32 w-[500px] h-[500px]"
           color="rgba(13, 148, 136, 0.08)"
@@ -53,11 +51,6 @@ export default function Hero() {
           className="-bottom-40 -left-40 w-[400px] h-[400px]"
           color="rgba(245, 158, 11, 0.06)"
         />
-        <MorphingBlob
-          className="top-1/3 left-1/3 w-[300px] h-[300px]"
-          color="rgba(13, 148, 136, 0.04)"
-        />
-        {/* Subtle pattern */}
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
@@ -70,18 +63,18 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center py-24 lg:py-32">
           {/* Left: Content */}
           <div className="flex flex-col justify-center">
-            {/* Badge – blur + slide in */}
+            {/* Urgency badge */}
             <Reveal delay={0.1} blur>
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50 border border-primary-200/60 text-primary-700 text-sm font-medium mb-6">
-                <span className="w-2 h-2 rounded-full bg-primary-500 animate-pulse-soft" />
-                Clínica veterinaria de confianza en CDMX
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-warm-50 border border-warm-200/60 text-warm-700 text-sm font-semibold mb-6">
+                <span className="w-2 h-2 rounded-full bg-warm-500 animate-pulse-soft" />
+                Urgencias 24/7 — Atendemos hoy mismo
               </span>
             </Reveal>
 
-            {/* Headline – word-by-word reveal */}
+            {/* Headline — problem-focused */}
             <div className="mb-2">
               <TextReveal
-                text="Cuidamos a tu mascota"
+                text="¿Tu mascota está enferma"
                 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-[1.1] tracking-tight"
                 tag="h1"
                 delay={0.2}
@@ -90,7 +83,7 @@ export default function Hero() {
             </div>
             <div className="mb-6">
               <TextReveal
-                text="como parte de tu familia"
+                text="o necesita un chequeo?"
                 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-primary-600"
                 tag="span"
                 delay={0.5}
@@ -98,78 +91,61 @@ export default function Hero() {
               />
             </div>
 
-            {/* Subtitle – fade + blur */}
+            {/* Subtitle — benefit-driven, empathetic */}
             <Reveal delay={0.7} blur duration={0.8}>
               <p className="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-xl mb-8">
-                Medicina veterinaria con{" "}
-                <strong className="text-slate-700">
-                  tecnología de vanguardia
-                </strong>
-                , calidez humana y un equipo que ama lo que hace. Tu
-                tranquilidad y la salud de tu compañero son nuestra prioridad.
+                Sabemos lo preocupante que es ver a tu compañero mal.{" "}
+                <strong className="text-slate-800">
+                  Escríbenos por WhatsApp y en menos de 5 minutos
+                </strong>{" "}
+                un veterinario certificado te orientará. Sin filas, sin esperas.
               </p>
             </Reveal>
 
-            {/* CTAs – Magnetic hover effect */}
+            {/* Primary CTA — WhatsApp focused */}
             <Reveal delay={0.9} blur>
-              <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <MagneticHover strength={0.15}>
                   <a
-                    href="https://wa.me/528445841876?text=Hola%2C%20vi%20su%20pagina%20y%20me%20gustaria%20agendar%20una%20cita%20para%20mi%20mascota.%20Podrian%20darme%20informacion%20por%20favor%3F"
+                    href="https://wa.me/528445841876?text=Hola%2C%20necesito%20una%20cita%20para%20mi%20mascota.%20%C2%BFTienen%20disponibilidad%20hoy%3F"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-2xl shadow-lg shadow-primary-500/25 hover:shadow-xl hover:shadow-primary-500/30 transition-all duration-300 text-base"
+                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold rounded-2xl shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/30 transition-all duration-300 text-base sm:text-lg"
                   >
-                    <FaWhatsapp className="text-xl group-hover:scale-110 transition-transform" />
-                    Contactar por WhatsApp
+                    <FaWhatsapp className="text-2xl group-hover:scale-110 transition-transform" />
+                    Agendar cita por WhatsApp ahora
                   </a>
                 </MagneticHover>
                 <MagneticHover strength={0.15}>
                   <a
-                    href="#contacto"
+                    href="tel:+528445841876"
                     className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-cream-50 text-slate-700 font-semibold rounded-2xl border-2 border-slate-200 hover:border-primary-300 shadow-soft hover:shadow-soft-lg transition-all duration-300 text-base"
                   >
-                    <FaCalendarCheck className="text-primary-500 group-hover:scale-110 transition-transform" />
-                    Agendar Consulta
+                    📞 Llamar ahora
                   </a>
                 </MagneticHover>
               </div>
             </Reveal>
 
-            {/* Stats row – staggered reveal */}
-            <div className="flex flex-wrap gap-8">
-              {stats.map((stat, i) => (
+            {/* Micro-trust points */}
+            <div className="flex flex-col gap-3">
+              {urgencyPoints.map((point, i) => (
                 <Reveal
-                  key={stat.label}
-                  delay={1.1 + i * 0.12}
+                  key={point.text}
+                  delay={1.1 + i * 0.1}
                   direction="left"
                   blur
                 >
                   <div className="flex items-center gap-3">
-                    <motion.div
-                      className="flex items-center justify-center w-10 h-10 rounded-xl bg-primary-50 text-primary-600"
-                      whileHover={{ scale: 1.15, rotate: 5 }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 15,
-                      }}
-                    >
-                      <stat.icon className="text-lg" />
-                    </motion.div>
-                    <div>
-                      <p className="text-xl font-bold text-slate-900 font-heading leading-none">
-                        {stat.value}
-                      </p>
-                      <p className="text-sm text-slate-500">{stat.label}</p>
-                    </div>
+                    <point.icon className="text-primary-500 text-sm flex-shrink-0" />
+                    <p className="text-sm text-slate-600">{point.text}</p>
                   </div>
                 </Reveal>
               ))}
             </div>
           </div>
 
-          {/* Right: Visual / Image placeholder */}
+          {/* Right: Visual */}
           <Reveal direction="right" delay={0.3} scale blur duration={0.9}>
             <div className="relative w-full max-w-xs sm:max-w-sm lg:max-w-lg mx-auto">
               {/* Main image container */}
@@ -178,43 +154,25 @@ export default function Hero() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
               >
-                {/* Gradient base behind transparent PNG */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-100 via-primary-50 to-cream-100 rounded-3xl" />
-                {/* Decorative circles */}
                 <motion.div
                   className="absolute top-8 right-8 w-32 h-32 rounded-full bg-warm-200/30 blur-xl"
                   animate={{ scale: [1, 1.2, 1] }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   aria-hidden="true"
                 />
-                <motion.div
-                  className="absolute bottom-12 left-6 w-24 h-24 rounded-full bg-primary-200/40 blur-lg"
-                  animate={{ scale: [1.1, 1, 1.1] }}
-                  transition={{
-                    duration: 5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  aria-hidden="true"
-                />
-                {/* Dog image */}
                 <Image
                   src="/image/dog.png"
-                  alt="Perro feliz atendido en Firo Vet"
+                  alt="Mascota feliz y saludable atendida en Firo Vet"
                   fill
                   className="object-cover object-center scale-110 hover:scale-[1.15] transition-transform duration-700"
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
-                {/* Subtle vignette overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/10 via-transparent to-transparent" />
               </motion.div>
 
-              {/* Floating card: rating – spring physics float (hidden on mobile) */}
+              {/* Floating card: Google rating */}
               <FloatingElement
                 className="absolute -bottom-4 -left-4 sm:-left-8 z-10 hidden sm:block"
                 duration={4}
@@ -224,12 +182,7 @@ export default function Hero() {
                   className="glass rounded-2xl p-4 shadow-soft-lg"
                   initial={{ opacity: 0, scale: 0.8, x: -20 }}
                   animate={{ opacity: 1, scale: 1, x: 0 }}
-                  transition={{
-                    delay: 1.2,
-                    type: "spring",
-                    stiffness: 200,
-                    damping: 15,
-                  }}
+                  transition={{ delay: 1.2, type: "spring", stiffness: 200, damping: 15 }}
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="flex items-center gap-3">
@@ -240,13 +193,13 @@ export default function Hero() {
                       <p className="font-heading font-bold text-slate-900 text-sm leading-none">
                         4.9 / 5.0
                       </p>
-                      <p className="text-slate-500 text-xs">+340 reseñas</p>
+                      <p className="text-slate-500 text-xs">+340 reseñas en Google</p>
                     </div>
                   </div>
                 </motion.div>
               </FloatingElement>
 
-              {/* Floating card: trust – spring physics float (hidden on mobile) */}
+              {/* Floating card: Response time */}
               <FloatingElement
                 className="absolute -top-4 -right-4 sm:-right-8 z-10 hidden sm:block"
                 duration={5}
@@ -257,29 +210,23 @@ export default function Hero() {
                   className="glass rounded-2xl p-4 shadow-soft-lg"
                   initial={{ opacity: 0, scale: 0.8, x: 20 }}
                   animate={{ opacity: 1, scale: 1, x: 0 }}
-                  transition={{
-                    delay: 1.4,
-                    type: "spring",
-                    stiffness: 200,
-                    damping: 15,
-                  }}
+                  transition={{ delay: 1.4, type: "spring", stiffness: 200, damping: 15 }}
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center">
-                      <FaShieldAlt className="text-primary-600" />
+                      <FaClock className="text-primary-600" />
                     </div>
                     <div>
                       <p className="font-heading font-bold text-slate-900 text-sm leading-none">
-                        Veterinaria
+                        Respuesta
                       </p>
-                      <p className="text-slate-500 text-xs">Certificada</p>
+                      <p className="text-slate-500 text-xs">en 5 min o menos</p>
                     </div>
                   </div>
                 </motion.div>
               </FloatingElement>
 
-              {/* Animated decorative ring (hidden on mobile) */}
               <motion.div
                 className="absolute -z-10 -inset-4 rounded-[2rem] border-2 border-dashed border-primary-200/30 hidden sm:block"
                 animate={{ rotate: 360 }}
@@ -290,7 +237,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom wave separator with parallax */}
+      {/* Bottom wave */}
       <motion.div
         className="absolute bottom-0 left-0 right-0"
         aria-hidden="true"
