@@ -3,7 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import { FaWhatsapp, FaCheckCircle } from "react-icons/fa";
+import { FaWhatsapp, FaCheckCircle, FaCalendarCheck } from "react-icons/fa";
 import {
   TextReveal,
   Reveal,
@@ -70,9 +70,11 @@ export default function FinalCTA() {
 
             <Reveal delay={0.3} blur>
               <p className="text-primary-100 text-lg leading-relaxed max-w-2xl mb-8">
-                Más de <strong className="text-white">5,000 familias</strong> ya confían en nosotros.
-                No sigas buscando — da el paso y agenda tu cita hoy con{" "}
-                <strong className="text-white">20% de descuento</strong> en la primera consulta.
+                Más de <strong className="text-white">5,000 familias</strong> ya
+                confían en nosotros. No sigas buscando — da el paso y agenda tu
+                cita hoy con{" "}
+                <strong className="text-white">20% de descuento</strong> en la
+                primera consulta.
               </p>
             </Reveal>
 
@@ -80,7 +82,10 @@ export default function FinalCTA() {
             <Reveal delay={0.5} blur>
               <ul className="space-y-3 mb-10">
                 {guarantees.map((g) => (
-                  <li key={g} className="flex items-center gap-3 text-primary-100 text-sm">
+                  <li
+                    key={g}
+                    className="flex items-center gap-3 text-primary-100 text-sm"
+                  >
                     <FaCheckCircle className="text-primary-300 text-sm flex-shrink-0" />
                     {g}
                   </li>
@@ -92,12 +97,10 @@ export default function FinalCTA() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <MagneticHover strength={0.15}>
                   <a
-                    href="https://wa.me/528445841876?text=Hola%2C%20quiero%20aprovechar%20el%2020%25%20de%20descuento%20en%20la%20primera%20consulta.%20%C2%BFComo%20puedo%20agendar%3F"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#agendar"
                     className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-primary-700 font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 text-base sm:text-lg"
                   >
-                    <FaWhatsapp className="text-xl group-hover:scale-110 transition-transform" />
+                    <FaCalendarCheck className="text-xl group-hover:scale-110 transition-transform" />
                     Agendar con 20% de descuento
                   </a>
                 </MagneticHover>
@@ -125,7 +128,11 @@ export default function FinalCTA() {
               <motion.div
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full bg-white/10 blur-3xl"
                 animate={{ scale: [1, 1.15, 1] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 aria-hidden="true"
               />
               <FloatingElement duration={5} distance={12}>

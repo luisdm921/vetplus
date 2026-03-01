@@ -7,6 +7,7 @@ import {
   FaMapMarkerAlt,
   FaClock,
   FaDirections,
+  FaCalendarCheck,
 } from "react-icons/fa";
 import {
   Reveal,
@@ -176,17 +177,16 @@ export default function Contact() {
                       ¿Listo para agendar?
                     </h3>
                     <p className="text-primary-100 text-sm mb-4 leading-relaxed">
-                      Primera consulta con 20% de descuento para nuevos pacientes.
+                      Primera consulta con 20% de descuento para nuevos
+                      pacientes.
                     </p>
                     <MagneticHover strength={0.12}>
                       <a
-                        href="https://wa.me/528445841876?text=Hola%2C%20quiero%20agendar%20una%20cita.%20Vi%20que%20tienen%2020%25%20de%20descuento%20en%20la%20primera%20consulta.%20%C2%BFComo%20procedo%3F"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="#agendar"
                         className="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-primary-700 font-semibold rounded-xl hover:bg-cream-50 transition-all duration-300 shadow-lg hover:shadow-xl text-sm"
                       >
-                        <FaWhatsapp className="text-lg" />
-                        Agendar cita por WhatsApp
+                        <FaCalendarCheck className="text-lg" />
+                        Agendar cita en línea
                       </a>
                     </MagneticHover>
                   </div>

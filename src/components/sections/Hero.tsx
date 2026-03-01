@@ -8,6 +8,7 @@ import {
   FaShieldAlt,
   FaClock,
   FaCheckCircle,
+  FaCalendarCheck,
 } from "react-icons/fa";
 import {
   TextReveal,
@@ -107,13 +108,11 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <MagneticHover strength={0.15}>
                   <a
-                    href="https://wa.me/528445841876?text=Hola%2C%20necesito%20una%20cita%20para%20mi%20mascota.%20%C2%BFTienen%20disponibilidad%20hoy%3F"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#20BD5A] text-white font-bold rounded-2xl shadow-lg shadow-[#25D366]/25 hover:shadow-xl hover:shadow-[#25D366]/30 transition-all duration-300 text-base sm:text-lg"
+                    href="#agendar"
+                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary-600 hover:bg-primary-700 text-white font-bold rounded-2xl shadow-lg shadow-primary-600/25 hover:shadow-xl hover:shadow-primary-600/30 transition-all duration-300 text-base sm:text-lg"
                   >
-                    <FaWhatsapp className="text-2xl group-hover:scale-110 transition-transform" />
-                    Agendar cita por WhatsApp ahora
+                    <FaCalendarCheck className="text-2xl group-hover:scale-110 transition-transform" />
+                    Agendar cita ahora — Es Gratis
                   </a>
                 </MagneticHover>
                 <MagneticHover strength={0.15}>
@@ -158,7 +157,11 @@ export default function Hero() {
                 <motion.div
                   className="absolute top-8 right-8 w-32 h-32 rounded-full bg-warm-200/30 blur-xl"
                   animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
                   aria-hidden="true"
                 />
                 <Image
@@ -182,7 +185,12 @@ export default function Hero() {
                   className="glass rounded-2xl p-4 shadow-soft-lg"
                   initial={{ opacity: 0, scale: 0.8, x: -20 }}
                   animate={{ opacity: 1, scale: 1, x: 0 }}
-                  transition={{ delay: 1.2, type: "spring", stiffness: 200, damping: 15 }}
+                  transition={{
+                    delay: 1.2,
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 15,
+                  }}
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="flex items-center gap-3">
@@ -193,7 +201,9 @@ export default function Hero() {
                       <p className="font-heading font-bold text-slate-900 text-sm leading-none">
                         4.9 / 5.0
                       </p>
-                      <p className="text-slate-500 text-xs">+340 reseñas en Google</p>
+                      <p className="text-slate-500 text-xs">
+                        +340 reseñas en Google
+                      </p>
                     </div>
                   </div>
                 </motion.div>
@@ -210,7 +220,12 @@ export default function Hero() {
                   className="glass rounded-2xl p-4 shadow-soft-lg"
                   initial={{ opacity: 0, scale: 0.8, x: 20 }}
                   animate={{ opacity: 1, scale: 1, x: 0 }}
-                  transition={{ delay: 1.4, type: "spring", stiffness: 200, damping: 15 }}
+                  transition={{
+                    delay: 1.4,
+                    type: "spring",
+                    stiffness: 200,
+                    damping: 15,
+                  }}
                   whileHover={{ scale: 1.05 }}
                 >
                   <div className="flex items-center gap-3">

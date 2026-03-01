@@ -5,6 +5,7 @@ import {
   ProblemsAndSolutions,
   Services,
   Urgency,
+  Booking,
   Contact,
   FAQ,
   FinalCTA,
@@ -31,6 +32,7 @@ export default function Home() {
       <ProblemsAndSolutions />
       <Services />
       <Urgency />
+      <Booking />
       <Contact />
       <FAQ />
       <FinalCTA />

@@ -8,13 +8,20 @@ import {
   useTransform,
   useMotionValueEvent,
 } from "framer-motion";
-import { FaPaw, FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
+import {
+  FaPaw,
+  FaBars,
+  FaTimes,
+  FaWhatsapp,
+  FaCalendarCheck,
+} from "react-icons/fa";
 import { MagneticHover, ScrollProgress } from "@/components/animations";
 
 const navLinks = [
   { label: "Inicio", href: "#inicio" },
   { label: "Testimonios", href: "#testimonios" },
   { label: "Servicios", href: "#servicios" },
+  { label: "Agendar", href: "#agendar" },
   { label: "Ubicación", href: "#contacto" },
   { label: "Preguntas", href: "#preguntas" },
 ];
@@ -126,19 +133,17 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-3">
               <MagneticHover strength={0.15}>
                 <motion.a
-                  href="https://wa.me/528445841876?text=Hola%2C%20me%20gustaria%20agendar%20una%20cita%20con%20ustedes.%20Tienen%20disponibilidad%3F"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] text-white text-sm font-semibold rounded-xl shadow-sm shadow-[#25D366]/20 transition-all duration-300"
+                  href="#agendar"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-primary-600 text-white text-sm font-semibold rounded-xl shadow-sm shadow-primary-600/20 transition-all duration-300"
                   whileHover={{
-                    backgroundColor: "#20BD5A",
-                    boxShadow: "0 8px 24px rgba(37,211,102,0.3)",
+                    backgroundColor: "#0d7377",
+                    boxShadow: "0 8px 24px rgba(13,148,136,0.3)",
                     scale: 1.03,
                   }}
                   whileTap={{ scale: 0.97 }}
                   transition={{ type: "spring", stiffness: 400, damping: 15 }}
                 >
-                  <FaWhatsapp className="text-base" />
+                  <FaCalendarCheck className="text-base" />
                   Agendar cita ahora
                 </motion.a>
               </MagneticHover>
@@ -207,14 +212,12 @@ export default function Navbar() {
                   transition={{ delay: 0.3 }}
                 >
                   <a
-                    href="https://wa.me/528445841876?text=Hola%2C%20me%20gustaria%20agendar%20una%20cita%20con%20ustedes.%20Tienen%20disponibilidad%3F"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#agendar"
                     onClick={() => setMobileOpen(false)}
                     className="flex items-center justify-center gap-3 w-full px-6 py-4 bg-primary-600 hover:bg-primary-700 text-white font-semibold rounded-xl text-base transition-colors"
                   >
-                    <FaWhatsapp className="text-xl" />
-                    Agendar Cita por WhatsApp
+                    <FaCalendarCheck className="text-xl" />
+                    Agendar Cita
                   </a>
                 </motion.div>
               </nav>

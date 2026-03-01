@@ -11,6 +11,7 @@ export {
   Services,
   Urgency,
   WhyChooseUs,
+  Booking,
   Contact,
   FAQ,
   FinalCTA,

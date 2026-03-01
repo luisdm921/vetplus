@@ -6,6 +6,7 @@ export { default as ProblemsAndSolutions } from "./ProblemsAndSolutions";
 export { default as Services } from "./Services";
 export { default as Urgency } from "./Urgency";
 export { default as WhyChooseUs } from "./WhyChooseUs";
+export { default as Booking } from "./Booking";
 export { default as Contact } from "./Contact";
 export { default as FAQ } from "./FAQ";
 export { default as FinalCTA } from "./FinalCTA";
